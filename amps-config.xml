@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AMPSConfig>
+    <Name>Prometheus-Demo</Name>
+
+    <Admin>
+        <InetAddr>localhost:8085</InetAddr>
+        <SQLTransport>any-ws</SQLTransport>
+        <Interval>1s</Interval>
+        <FileName>stats.db</FileName>
+    </Admin>
+
+    <Transports>
+        <Transport>
+            <Name>any-ws</Name>
+            <Type>tcp</Type>
+            <InetAddr>9008</InetAddr>
+            <Protocol>websocket</Protocol>
+        </Transport>
+    </Transports>
+
+    <Logging>
+        <Target>
+            <Protocol>stdout</Protocol>
+            <Level>error</Level>
+            <IncludeErrors>00-0015</IncludeErrors>
+        </Target>
+    </Logging>
+</AMPSConfig>
